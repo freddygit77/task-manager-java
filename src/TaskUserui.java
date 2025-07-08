@@ -23,7 +23,7 @@ public class TaskUserui extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Barre du haut
+        
         JPanel topPanel = new JPanel();
         taskInputField = new JTextField(20);
         dateFinField = new JTextField(10);
@@ -39,13 +39,13 @@ public class TaskUserui extends JFrame {
 
         add(topPanel, BorderLayout.NORTH);
 
-        // Zone des tâches
+        
         taskListPanel = new JPanel();
         taskListPanel.setLayout(new BoxLayout(taskListPanel, BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(taskListPanel);
         add(scrollPane, BorderLayout.CENTER);
 
-        // Action bouton Ajouter
+        
         addButton.addActionListener(e -> {
             String description = taskInputField.getText().trim();
             String dateFinText = dateFinField.getText().trim();
@@ -67,7 +67,7 @@ public class TaskUserui extends JFrame {
             }
         });
 
-        // Action bouton Afficher
+        
         showButton.addActionListener(e -> refreshTaskList());
 
         refreshTaskList();
