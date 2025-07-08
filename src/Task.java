@@ -9,7 +9,7 @@ public class Task implements Serializable {
 
     public Task(String description, LocalDate dateFin) {
         this.description = description;
-        this.dateAjout = LocalDate.now(); // aujourd’hui
+        this.dateAjout = LocalDate.now(); 
         this.dateFin = dateFin;
         this.isDone = false;
     }
