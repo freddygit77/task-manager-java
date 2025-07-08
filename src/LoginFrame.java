@@ -6,7 +6,7 @@ public class LoginFrame extends JFrame {
     private UserManager userManager;
 
     public LoginFrame() {
-        userManager = new UserManager(); // Assure-toi que cette classe existe
+        userManager = new UserManager(); 
 
         setTitle("Connexion");
         setSize(250, 250);
@@ -14,15 +14,15 @@ public class LoginFrame extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new GridLayout(6, 1, 10, 10));
 
-        // Champs de saisie
+        
         JTextField usernameField = new JTextField();
         JPasswordField passwordField = new JPasswordField();
 
-        // Boutons
+        
         JButton loginBtn = new JButton("Se connecter");
         JButton registerBtn = new JButton("Créer un compte");
 
-        // Ajout des composants à la fenêtre
+        
         add(new JLabel("Nom d'utilisateur :"));
         add(usernameField);
         add(new JLabel("Mot de passe :"));
@@ -30,7 +30,7 @@ public class LoginFrame extends JFrame {
         add(loginBtn);
         add(registerBtn);
 
-        // Action bouton "Se connecter"
+        
         loginBtn.addActionListener(e -> {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
@@ -45,7 +45,7 @@ public class LoginFrame extends JFrame {
             }
         });
 
-        // Action bouton "Créer un compte"
+        
         registerBtn.addActionListener(e -> {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
